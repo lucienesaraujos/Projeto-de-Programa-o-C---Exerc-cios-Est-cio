@@ -1,2 +1,2 @@
-# Projeto-de-Programa-o-C---Exerc-cios-Est-cio
+# Projeto-Progamacao-C
 Pasta de projetos em C para atividades do 1° Semestre 
