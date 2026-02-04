@@ -48,15 +48,15 @@ int main () {
     printf("PIB per capita: %.2f reais\n\n", percapita2);      
 
 //Comparações
-printf("**Comparação das Cartas**\n\n");
-printf("Qual a cidade mais populosa? Cidade 1 (%u) ou Cidade 2 (%u): %d\n", populacao1, populacao2, populacao1 > populacao2);
-printf("Qual a cidade com maior área? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n", area1, area2, area1 > area2);
-printf("Qual a cidade com maior PIB? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n", pib1, pib2, pib1 > pib2);
-printf("Qual a cidade mais pontos turísticos? Cidade 1 (%d) ou Cidade 2 (%d): %d\n", turistas1, turistas2, turistas1 > turistas2);
-printf("Qual a cidade com maior densidade populacional? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n", densidade1, densidade2, (1/densidade1) > (1/densidade2));
-printf("Qual a cidade maior PIB per capita? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n\n", percapita1, percapita2, percapita1 > percapita2);
+    printf("**Comparação das Cartas**\n\n");
+    printf("Qual a cidade mais populosa? Cidade 1 (%u) ou Cidade 2 (%u): %d\n", populacao1, populacao2, populacao1 > populacao2);
+    printf("Qual a cidade com maior área? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n", area1, area2, area1 > area2);
+    printf("Qual a cidade com maior PIB? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n", pib1, pib2, pib1 > pib2);
+    printf("Qual a cidade mais pontos turísticos? Cidade 1 (%d) ou Cidade 2 (%d): %d\n", turistas1, turistas2, turistas1 > turistas2);
+    printf("Qual a cidade com maior densidade populacional? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n", densidade1, densidade2, densidade1 < densidade2);
+    printf("Qual a cidade maior PIB per capita? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n\n", percapita1, percapita2, percapita1 > percapita2);
 
-printf("Qual a cidade mais poderosa? Cidade 1 ou Cidade 2: %d\n\n", (populacao1 + area1 + pib1 + turistas1 + percapita1 + (1/densidade1)) > (populacao2 + area2 + pib2 + turistas2 + percapita2 + (1/densidade2)));
+    printf("Qual a cidade mais poderosa? Cidade 1 ou Cidade 2: %d\n\n", (populacao1 + area1 + pib1 + turistas1 + percapita1 + (1/densidade1)) > (populacao2 + area2 + pib2 + turistas2 + percapita2 + (1/densidade2)));
 
 
 
