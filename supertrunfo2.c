@@ -166,9 +166,9 @@ break;
 case 4:
 printf("\nAtributo Pontos turísticos\n");
 if (turistas1 > turistas2){
-    printf("A %s, %s, com %d pontos turísticos é a vencedora\n\n", carta1, cidade1, turistas1);
+    printf("A %s, %s com %d pontos turísticos é a vencedora\n\n", carta1, cidade1, turistas1);
 } else if (turistas2 > turistas1) {
-    printf("A %s, %s, com %d pontos turísticos é a vencedora\n\n", carta2, cidade2, turistas2);
+    printf("A %s, %s com %d pontos turísticos é a vencedora\n\n", carta2, cidade2, turistas2);
 } else {
     printf ("As cidades empataram\n\n");
 }
@@ -177,9 +177,9 @@ break;
 case 5:
 printf("\nAtributo Densidade demográfica\n");
 if (densidade1 < densidade2){
-    printf("A %s, %s, com %.2f de pessoas/km² é a vencedora\n\n", carta1, cidade1, densidade1);
+    printf("A %s, %s com %.2f de pessoas/km² é a vencedora\n\n", carta1, cidade1, densidade1);
 } else if (densidade2 < densidade1) {
-    printf("A %s, %s, com %.2f de pessoas/km² é a vencedora\n\n", carta2, cidade2, densidade2);
+    printf("A %s, %s com %.2f de pessoas/km² é a vencedora\n\n", carta2, cidade2, densidade2);
 } else {
     printf ("As cidades empataram\n\n");
 }
