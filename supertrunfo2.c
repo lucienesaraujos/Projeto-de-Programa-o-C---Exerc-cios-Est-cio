@@ -2,7 +2,7 @@
 
 int main () {
 
-int jogador;
+int jogador, opcao, opcao2;
 
 //Carta 01  
     char carta1[]  = "Carta 01" ;
@@ -15,6 +15,7 @@ int jogador;
     int turistas1 = 50; 
     float densidade1 = populacao1 / area1;
     float percapita1 = (float) (pib1*1000000000) / populacao1;
+    /*
     printf("\n%s\n", carta1);
     printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -24,7 +25,7 @@ int jogador;
     printf("PIB: %.2f bilhões\n", pib1);
     printf("Número de pontos turísticos: %d\n", turistas1);
     printf("Densidade populacional: %.2f km²\n", densidade1);  
-    printf("PIB per capita: %.2f reais\n\n", percapita1);      
+    printf("PIB per capita: %.2f reais\n\n", percapita1);  */    
         
             
 //Carta 02
@@ -38,7 +39,7 @@ int jogador;
     int turistas2 = 30;
     float densidade2 = populacao2 / area2;
     float percapita2 = (float) (pib2*1000000000) / populacao2;
-    printf("\n%s\n", carta2);
+    /*printf("\n%s\n", carta2);
     printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Cidade: %s\n", cidade2);
@@ -47,7 +48,7 @@ int jogador;
     printf("PIB: %.2f bilhões\n", pib2);
     printf("Número de pontos turísticos: %d\n", turistas2);
     printf("Densidade populacional: %.2f km²\n", densidade2);  
-    printf("PIB per capita: %.2f reais\n\n", percapita2);      
+    printf("PIB per capita: %.2f reais\n\n", percapita2);   */   
 
 //Comparação simples
 /*{    printf("**Comparação das Cartas**\n\n");
@@ -60,6 +61,7 @@ int jogador;
     printf("Qual a cidade mais poderosa? Cidade 1 ou Cidade 2: %d\n\n", (populacao1 + area1 + pib1 + turistas1 + percapita1 + (1/densidade1)) > (populacao2 + area2 + pib2 + turistas2 + percapita2 + (1/densidade2)));
 }*/
 //Comparação com if-else
+
 /*{    printf("**Comparação das Cartas 2**\n\n");
     
     printf("Atributo população:\n");
@@ -124,9 +126,9 @@ int jogador;
 }*/
 
 //Comparação com switch e if-else
-
-printf("SUPER TURNFO\n\nEscolha qual caracterista você quer comparar\n\n1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n\nDigite a sua escolha: ");
+/*printf("SUPER TURNFO\n\nEscolha qual caracterista você quer comparar\n\n1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n\nDigite a sua escolha: ");
 scanf("%d", &jogador);
+
 
 switch (jogador) {
 
@@ -187,8 +189,39 @@ break;
 
 default:
 printf("\nOpção inválida\n");
+} */
+
+printf("*.*.* SUPER TRUNFO *.*.*\n\nBem-vindo ao jogo!\n\n_ M E N U _\n\n1. Jogar\n2. Regras\n3.Sair\n\nDigite sua escolha: "); 
+scanf("%d", &opcao);
+
+switch (opcao) {
+case 1:
+printf("Escolha quantos atributos deseja comparar (1 a 6): ");
+scanf("%d", opcao2);
+switch (opcao2){
+case 1:
+
+
 }
 
+printf("\nAtributos\n1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densdidade populacional\n6. Renda per capita\nEscolha o 1º atributo para comparar\n");
+scanf("%d", &jogador);
+
+break;
+
+/* parte ok
+case 2:
+printf("\n1. Você deve escolher uma carta;\n2. Você deve escolher quantos atributos quer comparar;\n3. Escolha os atributos para a comparação;\n4. Ao final a soma dos atributos dirá qual a carta vencedora.\n");
+break;
+
+case 3:
+printf("Saindo...\n");
+break;
+
+default:
+printf("Opção inválida\n");*/
+
 return 0;
+}
 
 }
