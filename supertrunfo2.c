@@ -1,8 +1,7 @@
 #include <stdio.h>
+# include <stdlib.h>
 
 int main () {
-
-int jogador, opcao, opcao2;
 
 //Carta 01  
     char carta1[]  = "Carta 01" ;
@@ -15,7 +14,7 @@ int jogador, opcao, opcao2;
     int turistas1 = 50; 
     float densidade1 = populacao1 / area1;
     float percapita1 = (float) (pib1*1000000000) / populacao1;
-    /*
+/*
     printf("\n%s\n", carta1);
     printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -26,8 +25,6 @@ int jogador, opcao, opcao2;
     printf("Número de pontos turísticos: %d\n", turistas1);
     printf("Densidade populacional: %.2f km²\n", densidade1);  
     printf("PIB per capita: %.2f reais\n\n", percapita1);  */    
-        
-            
 //Carta 02
     char carta2[]  = "Carta 02" ;
     char estado2[] = "Rio_de_Janeiro";
@@ -39,7 +36,8 @@ int jogador, opcao, opcao2;
     int turistas2 = 30;
     float densidade2 = populacao2 / area2;
     float percapita2 = (float) (pib2*1000000000) / populacao2;
-    /*printf("\n%s\n", carta2);
+/*
+    printf("\n%s\n", carta2);
     printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Cidade: %s\n", cidade2);
@@ -49,9 +47,9 @@ int jogador, opcao, opcao2;
     printf("Número de pontos turísticos: %d\n", turistas2);
     printf("Densidade populacional: %.2f km²\n", densidade2);  
     printf("PIB per capita: %.2f reais\n\n", percapita2);   */   
-
 //Comparação simples
-/*{    printf("**Comparação das Cartas**\n\n");
+/*
+    {    printf("**Comparação das Cartas**\n\n");
     printf("Qual a cidade mais populosa? Cidade 1 (%u) ou Cidade 2 (%u): %d\n", populacao1, populacao2, populacao1 > populacao2);
     printf("Qual a cidade com maior área? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n", area1, area2, area1 > area2);
     printf("Qual a cidade com maior PIB? Cidade 1 (%.2f) ou Cidade 2 (%.2f): %d\n", pib1, pib2, pib1 > pib2);
@@ -61,8 +59,8 @@ int jogador, opcao, opcao2;
     printf("Qual a cidade mais poderosa? Cidade 1 ou Cidade 2: %d\n\n", (populacao1 + area1 + pib1 + turistas1 + percapita1 + (1/densidade1)) > (populacao2 + area2 + pib2 + turistas2 + percapita2 + (1/densidade2)));
 }*/
 //Comparação com if-else
-
-/*{    printf("**Comparação das Cartas 2**\n\n");
+/*
+    {    printf("**Comparação das Cartas 2**\n\n");
     
     printf("Atributo população:\n");
     printf("%s - %s: %.2u de pessoas\n", carta1, cidade1, populacao1);
@@ -124,9 +122,9 @@ int jogador, opcao, opcao2;
         printf("A carta 2 (Rio_de_Janeiro) venceu!!!\n\n");
     }
 }*/
-
 //Comparação com switch e if-else
-/*printf("SUPER TURNFO\n\nEscolha qual caracterista você quer comparar\n\n1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n\nDigite a sua escolha: ");
+/*
+    printf("SUPER TURNFO\n\nEscolha qual caracterista você quer comparar\n\n1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n\nDigite a sua escolha: ");
 scanf("%d", &jogador);
 
 
@@ -191,37 +189,104 @@ default:
 printf("\nOpção inválida\n");
 } */
 
-printf("*.*.* SUPER TRUNFO *.*.*\n\nBem-vindo ao jogo!\n\n_ M E N U _\n\n1. Jogar\n2. Regras\n3.Sair\n\nDigite sua escolha: "); 
-scanf("%d", &opcao);
+    int jogador, adversario, menu1, menu2, menu3, resultado1, resultado2, resultado3, resultado4, resultado5, resultado6 ;
 
-switch (opcao) {
-case 1:
-printf("Escolha quantos atributos deseja comparar (1 a 6): ");
-scanf("%d", opcao2);
-switch (opcao2){
-case 1:
+    printf("*.*.* SUPER TRUNFO *.*.*\n\nBem-vindo ao jogo!\n\n_ M E N U _\n\n1. Jogar\n2. Regras\n3.Sair\n\nDigite sua escolha: "); 
+    scanf("%d", &menu1);
 
+    switch (menu1) {
+    case 1: 
+    printf("\nEscolha uma carta (1 a 2): ");
+    scanf("%d", &menu2);
+    if (menu2 == 1 ){
+    printf("A cidade escolhida foi %s. Sua carta adversária será %s.\n", cidade1, cidade2);
+    } else if (menu2 == 2) {
+    printf("A cidade escolhida foi %s\n. Sua carta adversária será %s.\n", cidade2, cidade1);
+    } else {
+    printf("Opção inválida\n");
+    }
+    
+    printf("\nEscolha qual atributo deseja comparar\n1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n6. PIB percapita\nDigite sua escolha: ");
+    scanf("%d", &menu3);
 
-}
+    if (menu3 == 2 ){
+    printf("\nVocê escolheu comparar 1 atributo: População\n");
+    if (resultado1 = 1) {
+        printf("\nA cidade %s, Venceu!\n", cidade1);
+    } else if (resultado1 = 0){
+        printf("\nA cidade %s , Venceu\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 2 ){
+    printf("\nVocê escolheu comparar atributo: Área\n");
+    if (resultado2 = 1) {
+        printf("\nA cidade %s Venceu!\n", cidade1);
+    } else if (resultado2 = 0){
+        printf("\nA cidade %s , Venceu\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 3 ){
+    printf("\nVocê escolheu comparar atributo: PIB\n");
+    if (resultado3 = 1) {
+        printf("\nA cidade %s Venceu!\n", cidade1);
+    } else if (resultado3 = 0) {
+        printf("\nA cidade %s , Venceu\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 4 ){
+    printf("\nVocê escolheu comparar atributos: Pontos turísticos\n");
+    if (resultado4 = 1) {
+        printf("\nA cidade %s Venceu!\n", cidade1);
+    } else if (resultado4 = 0){
+        printf("\nA cidade %s , Venceu\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 5 ){
+    printf("\nVocê escolheu comparar atributo: Densidade populacional\n");
+    if (resultado5 = 0) {
+        printf("\nA cidade %s Venceu!\n", cidade1);
+    } else if (resultado5 = 1){
+        printf("\nA cidade %s , Venceu\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 6 ){
+    printf("\nVocê escolheu comparar atibuto: Per capita\n");
+    if (resultado6 = 1) {
+        printf("\nA cidade %s Venceu!\n", cidade1);
+    } else if (resultado6 = 0){
+        printf("\nA cidade %s , Venceu\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else {
+    printf("Opção inválida\n");
+    }
 
-printf("\nAtributos\n1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densdidade populacional\n6. Renda per capita\nEscolha o 1º atributo para comparar\n");
-scanf("%d", &jogador);
+    resultado1 = populacao1 > populacao2 ? 1 : 0;
+    resultado2 = area1 > area2 ? 1 : 0;
+    resultado3 = pib1 > pib2 ? 1 : 0;
+    resultado4 = turistas1 > turistas2 ? 1 : 0;
+    resultado5 = densidade1 < densidade2 ? 1 : 0;
+    resultado6 = percapita1 > percapita2 ? 1 : 0;
 
-break;
+    break;
 
-/* parte ok
-case 2:
-printf("\n1. Você deve escolher uma carta;\n2. Você deve escolher quantos atributos quer comparar;\n3. Escolha os atributos para a comparação;\n4. Ao final a soma dos atributos dirá qual a carta vencedora.\n");
-break;
+    case 2:
+    printf("\n1. Você deve escolher uma carta;\n2. Você deve escolher quantos atributos quer comparar;\n3. Escolha os atributos para a comparação;\n4. Ao final a soma dos atributos dirá qual a carta vencedora.\n");
+    break;
 
-case 3:
-printf("Saindo...\n");
-break;
+    case 3:
+    printf("Saindo...\n");
+    break;
 
-default:
-printf("Opção inválida\n");*/
+    default:
+    printf("Opção inválida\n");
+    }
 
-return 0;
-}
-
+    return 0;
 }
