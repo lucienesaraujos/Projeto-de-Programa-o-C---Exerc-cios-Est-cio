@@ -1,4 +1,4 @@
-#include <stdio.h>
+# include <stdio.h>
 # include <stdlib.h>
 
 int main () {
@@ -189,7 +189,7 @@ default:
 printf("\nOpção inválida\n");
 } */
 
-    int jogador, adversario, menu1, menu2, menu3, resultado1, resultado2, resultado3, resultado4, resultado5, resultado6 ;
+    int jogador, adversario, menu1, menu2, menu3, menu4, menu5, resultado1, resultado2, resultado3, resultado4, resultado5, resultado6 ;
 
     printf("*.*.* SUPER TRUNFO *.*.*\n\nBem-vindo ao jogo!\n\n_ M E N U _\n\n1. Jogar\n2. Regras\n3.Sair\n\nDigite sua escolha: "); 
     scanf("%d", &menu1);
@@ -197,75 +197,17 @@ printf("\nOpção inválida\n");
     switch (menu1) {
     case 1: 
     printf("\nEscolha uma carta (1 a 2): ");
-    scanf("%d", &menu2);
-    if (menu2 == 1 ){
+    scanf("%d", &menu1);
+    if (menu1 == 1 ){
     printf("A cidade escolhida foi %s. Sua carta adversária será %s.\n", cidade1, cidade2);
-    } else if (menu2 == 2) {
-    printf("A cidade escolhida foi %s\n. Sua carta adversária será %s.\n", cidade2, cidade1);
+    } else if (menu1 == 2) {
+    printf("A cidade escolhida foi %s. Sua carta adversária será %s.\n", cidade2, cidade1);
     } else {
     printf("Opção inválida\n");
     }
     
     printf("\nEscolha qual atributo deseja comparar\n1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n6. PIB percapita\nDigite sua escolha: ");
-    scanf("%d", &menu3);
-
-    if (menu3 == 2 ){
-    printf("\nVocê escolheu comparar 1 atributo: População\n");
-    if (resultado1 = 1) {
-        printf("\nA cidade %s, Venceu!\n", cidade1);
-    } else if (resultado1 = 0){
-        printf("\nA cidade %s , Venceu\n", cidade2);
-    } else{
-        printf("\nAs cidades empataram!");
-    }
-    } else if (menu3 == 2 ){
-    printf("\nVocê escolheu comparar atributo: Área\n");
-    if (resultado2 = 1) {
-        printf("\nA cidade %s Venceu!\n", cidade1);
-    } else if (resultado2 = 0){
-        printf("\nA cidade %s , Venceu\n", cidade2);
-    } else{
-        printf("\nAs cidades empataram!");
-    }
-    } else if (menu3 == 3 ){
-    printf("\nVocê escolheu comparar atributo: PIB\n");
-    if (resultado3 = 1) {
-        printf("\nA cidade %s Venceu!\n", cidade1);
-    } else if (resultado3 = 0) {
-        printf("\nA cidade %s , Venceu\n", cidade2);
-    } else{
-        printf("\nAs cidades empataram!");
-    }
-    } else if (menu3 == 4 ){
-    printf("\nVocê escolheu comparar atributos: Pontos turísticos\n");
-    if (resultado4 = 1) {
-        printf("\nA cidade %s Venceu!\n", cidade1);
-    } else if (resultado4 = 0){
-        printf("\nA cidade %s , Venceu\n", cidade2);
-    } else{
-        printf("\nAs cidades empataram!");
-    }
-    } else if (menu3 == 5 ){
-    printf("\nVocê escolheu comparar atributo: Densidade populacional\n");
-    if (resultado5 = 0) {
-        printf("\nA cidade %s Venceu!\n", cidade1);
-    } else if (resultado5 = 1){
-        printf("\nA cidade %s , Venceu\n", cidade2);
-    } else{
-        printf("\nAs cidades empataram!");
-    }
-    } else if (menu3 == 6 ){
-    printf("\nVocê escolheu comparar atibuto: Per capita\n");
-    if (resultado6 = 1) {
-        printf("\nA cidade %s Venceu!\n", cidade1);
-    } else if (resultado6 = 0){
-        printf("\nA cidade %s , Venceu\n", cidade2);
-    } else{
-        printf("\nAs cidades empataram!");
-    }
-    } else {
-    printf("Opção inválida\n");
-    }
+    scanf("%d", &menu2);
 
     resultado1 = populacao1 > populacao2 ? 1 : 0;
     resultado2 = area1 > area2 ? 1 : 0;
@@ -274,13 +216,133 @@ printf("\nOpção inválida\n");
     resultado5 = densidade1 < densidade2 ? 1 : 0;
     resultado6 = percapita1 > percapita2 ? 1 : 0;
 
+    if (menu2 == 1 ){
+    printf("\nVocê escolheu comparar 1 atributo: População\n");
+    if (resultado1 = 1) {
+        printf("\nA cidade %s, Venceu!\n\n", cidade1);
+    } else if (resultado1 = 0){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu2 == 2 ){
+    printf("\nVocê escolheu comparar atributo: Área\n");
+    if (resultado2 = 1) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado2 = 0){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu2 == 3 ){
+    printf("\nVocê escolheu comparar atributo: PIB\n");
+    if (resultado3 = 1) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado3 = 0) {
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu2 == 4 ){
+    printf("\nVocê escolheu comparar atributos: Pontos turísticos\n");
+    if (resultado4 = 1) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado4 = 0){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu2 == 5 ){
+    printf("\nVocê escolheu comparar atributo: Densidade populacional\n");
+    if (resultado5 = 0) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado5 = 1){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu2 == 6 ){
+    printf("\nVocê escolheu comparar atibuto: Per capita\n");
+    if (resultado6 = 1) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado6 = 0){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else {
+    printf("Opção inválida\n\n");
+    }
+    
+    case 2:
+    printf("Escolha qual atributo deseja comparar\n1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n6. PIB percapita\nDigite sua escolha: ");
+    scanf("%d", &menu3);
+    if (menu3 == 1 ) {
+    printf("\nVocê escolheu comparar 1 atributo: População\n");
+    if (resultado1 = 1) {
+        printf("\nA cidade %s, Venceu!\n\n", cidade1);
+    } else if (resultado1 = 0){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 2 ){
+    printf("\nVocê escolheu comparar atributo: Área\n");
+    if (resultado2 = 1) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado2 = 0){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 3 ){
+    printf("\nVocê escolheu comparar atributo: PIB\n");
+    if (resultado3 = 1) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado3 = 0) {
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 4 ){
+    printf("\nVocê escolheu comparar atributos: Pontos turísticos\n");
+    if (resultado4 = 1) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado4 = 0){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 5 ){
+    printf("\nVocê escolheu comparar atributo: Densidade populacional\n");
+    if (resultado5 = 0) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado5 = 1){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else if (menu3 == 6 ){
+    printf("\nVocê escolheu comparar atibuto: Per capita\n");
+    if (resultado6 = 1) {
+        printf("\nA cidade %s Venceu!\n\n", cidade1);
+    } else if (resultado6 = 0){
+        printf("\nA cidade %s , Venceu\n\n", cidade2);
+    } else{
+        printf("\nAs cidades empataram!");
+    }
+    } else {
+    printf("Opção inválida\n\n");
+    }
+    
     break;
 
-    case 2:
+    
+    case 3:
     printf("\n1. Você deve escolher uma carta;\n2. Você deve escolher quantos atributos quer comparar;\n3. Escolha os atributos para a comparação;\n4. Ao final a soma dos atributos dirá qual a carta vencedora.\n");
     break;
 
-    case 3:
+    case 4:
     printf("Saindo...\n");
     break;
 
